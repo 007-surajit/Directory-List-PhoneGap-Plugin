@@ -8,7 +8,7 @@
     <name>Directory List</name>
 
     <description>Physical directory listing plugin for Cordova 3.x.x</description>
-    <repo>https://github.com/007-surajit/Asset-Directory-PhoneGap-Plugin.git</repo>
+    <repo>https://github.com/007-surajit/Directory-List-PhoneGap-Plugin.git</repo>
     <keywords>asset listing, phonegap directory listing, application directory listing, ios, android</keywords>
     <license>Apache 2.0</license>
 
@@ -46,6 +46,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/DirectoryList.java"      target-dir="in/developer/cordova/plugin" />        
+        <source-file src="src/android/DirectoryList.java"      target-dir="src/in/developer/cordova/plugin" />        
     </platform>	
 </plugin>
