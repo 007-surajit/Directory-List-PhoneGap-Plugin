@@ -1,0 +1,26 @@
+﻿#If ignorance is bliss, then somebody knock the smile off my face
+bin/
+.classpath
+.project
+.settings
+*.csproj.user
+*.suo
+*.cache
+Thumbs.db
+*.DS_Store
+
+*.bak
+*.cache
+*.log
+*.swp
+*.user
+
+
+
+
+
+
+
+
+
+ 

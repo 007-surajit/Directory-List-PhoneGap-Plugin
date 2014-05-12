@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="in.developer.cordova.plugin.directory-list"
+        version="0.1.0">
+
+    <name>Directory List</name>
+
+    <description>Physical directory listing plugin for Cordova 3.x.x</description>
+    <repo>https://github.com/007-surajit/Asset-Directory-PhoneGap-Plugin.git</repo>
+    <keywords>asset listing, phonegap directory listing, application directory listing, ios, android</keywords>
+    <license>Apache 2.0</license>
+
+    <author>Surajit Sarkar</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- interface -->
+    <js-module src="www/directory_list.js" name="directoryList">
+        <clobbers target="window.plugins.directoryList" />
+    </js-module>
+	
+	<asset src="www/directory_list.js" target="directory_list.js" />
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DirectoryList">
+                <param name="ios-package" value="DirectoryList"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/DirectoryList.h" />
+        <source-file src="src/ios/DirectoryList.m" />
+        
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DirectoryList">
+                <param name="android-package" value="in.developer.cordova.plugin.DirectoryList"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/DirectoryList.java"      target-dir="in/developer/cordova/plugin" />        
+    </platform>	
+</plugin>
