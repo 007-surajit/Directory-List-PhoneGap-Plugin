@@ -39,11 +39,11 @@ Returns any physical directory listing within the assets folder for Android appl
     // onDirectoryReadSuccess Callback
     // This method returns the directory listing in array format
     //
-    var onDirectoryReadSuccess = function(directoryList) {
-        $(directoryList).each(function(i,directoryEntry){		
-			console.log(directoryEntry);
-		});
-    };
+    for (var entry in directoryList) {
+		if( directoryList.hasOwnProperty( entry ) ) {
+		  console.log(directoryList[entry]);
+		} 
+	}
 
     // onError Callback if directory does not exists or it is empty
     //

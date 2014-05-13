@@ -61,4 +61,5 @@ public class DirectoryList extends CordovaPlugin {
 			Log.w("Asset List", dirFrom+" is not a directory: "+e.toString());
 			callbackContext.error(dirFrom+" is not a directory: "+e.getMessage());
 		}
+	}
 }
