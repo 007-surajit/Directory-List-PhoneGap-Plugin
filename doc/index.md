@@ -36,6 +36,8 @@ Returns any physical directory listing within the assets folder for Android appl
 
 ### Example
 
+Retrieve listing of www folder:
+
     // onDirectoryReadSuccess Callback
     // This method returns the directory listing in array format
     //
@@ -55,3 +57,25 @@ Returns any physical directory listing within the assets folder for Android appl
     }
 
     window.plugins.directoryList.getList("www",onDirectoryReadSuccess,onDirectoryReadError);
+	
+Retrieve listing of www/imgs folder:
+
+	// onDirectoryReadSuccess Callback
+    // This method returns the directory listing in array format
+    //
+	function onDirectoryReadSuccess(directoryList) {
+		for (var entry in directoryList) {
+			if( directoryList.hasOwnProperty( entry ) ) {
+			  console.log(directoryList[entry]);
+			} 
+		}
+	}
+
+    // onError Callback if directory does not exists or it is empty
+    //
+    function onDirectoryReadError(error) {
+        alert('Directory Read error \n' +
+              'message: ' + error);
+    }
+
+    window.plugins.directoryList.getList("www/imgs",onDirectoryReadSuccess,onDirectoryReadError);
