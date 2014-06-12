@@ -6,7 +6,7 @@ You can use the "/" separator to retrieve subfolder listing also.
 
 ## Installation
 
-    cordova plugin add in.developer.cordova.plugin.directory-list
+    cordova plugin add https://github.com/007-surajit/Directory-List-PhoneGap-Plugin.git
 
 ## Supported Platforms
 
@@ -39,10 +39,12 @@ Returns any physical directory listing within the assets folder for Android appl
     // onDirectoryReadSuccess Callback
     // This method returns the directory listing in array format
     //
-    for (var entry in directoryList) {
-		if( directoryList.hasOwnProperty( entry ) ) {
-		  console.log(directoryList[entry]);
-		} 
+	function onDirectoryReadSuccess(directoryList) {
+		for (var entry in directoryList) {
+			if( directoryList.hasOwnProperty( entry ) ) {
+			  console.log(directoryList[entry]);
+			} 
+		}
 	}
 
     // onError Callback if directory does not exists or it is empty
