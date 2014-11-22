@@ -48,4 +48,14 @@
 
         <source-file src="src/android/DirectoryList.java"      target-dir="src/in/developer/cordova/plugin" />        
     </platform>	
+	
+	 <!-- wp8-->
+    <platform name="wp8">
+      <config-file target="config.xml" parent="/*">
+        <feature name="DirectoryList">
+          <param name="wp-package" value="in.developer.cordova.plugin.DirectoryList"/>
+        </feature>
+      </config-file>
+
+    <source-file src="src/wp8/DirectoryList.cs"   />
 </plugin>
