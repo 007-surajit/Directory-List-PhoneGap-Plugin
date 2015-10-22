@@ -12,6 +12,7 @@ You can use the "/" separator to retrieve subfolder listing also.
 
 - Android
 - iOS
+- WP8
 
 ## Methods
 
